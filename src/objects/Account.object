@@ -1,10 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
-    <enableFeeds>true</enableFeeds>
     <fields>
         <fullName>AverageAmount__c</fullName>
         <defaultValue>0</defaultValue>
-        <deprecated>false</deprecated>
         <externalId>false</externalId>
         <label>Average Gift</label>
         <precision>16</precision>
@@ -15,7 +13,6 @@
     </fields>
     <fields>
         <fullName>FirstCloseDate__c</fullName>
-        <deprecated>false</deprecated>
         <externalId>false</externalId>
         <label>First Gift Date</label>
         <required>false</required>
@@ -160,7 +157,6 @@
     <fields>
         <fullName>LargestAmount__c</fullName>
         <defaultValue>0</defaultValue>
-        <deprecated>false</deprecated>
         <externalId>false</externalId>
         <label>Largest Gift</label>
         <precision>16</precision>
@@ -171,7 +167,6 @@
     </fields>
     <fields>
         <fullName>LastCloseDate__c</fullName>
-        <deprecated>false</deprecated>
         <externalId>false</externalId>
         <label>Last Gift Date</label>
         <required>false</required>
@@ -181,7 +176,6 @@
     <fields>
         <fullName>LastMembershipAmount__c</fullName>
         <defaultValue>0</defaultValue>
-        <deprecated>false</deprecated>
         <externalId>false</externalId>
         <label>Last Membership Amount</label>
         <precision>16</precision>
@@ -192,7 +186,6 @@
     </fields>
     <fields>
         <fullName>LastMembershipDate__c</fullName>
-        <deprecated>false</deprecated>
         <externalId>false</externalId>
         <label>Last Membership Date</label>
         <required>false</required>
@@ -201,7 +194,6 @@
     </fields>
     <fields>
         <fullName>LastMembershipLevel__c</fullName>
-        <deprecated>false</deprecated>
         <externalId>false</externalId>
         <label>Last Membership Level</label>
         <length>255</length>
@@ -212,7 +204,6 @@
     </fields>
     <fields>
         <fullName>LastMembershipOrigin__c</fullName>
-        <deprecated>false</deprecated>
         <externalId>false</externalId>
         <label>Last Membership Origin</label>
         <length>255</length>
@@ -224,7 +215,6 @@
     <fields>
         <fullName>LastOppAmount__c</fullName>
         <defaultValue>0</defaultValue>
-        <deprecated>false</deprecated>
         <externalId>false</externalId>
         <label>Last Gift Amount</label>
         <precision>16</precision>
@@ -235,7 +225,6 @@
     </fields>
     <fields>
         <fullName>MembershipEndDate__c</fullName>
-        <deprecated>false</deprecated>
         <externalId>false</externalId>
         <label>Membership End Date</label>
         <required>false</required>
@@ -244,7 +233,6 @@
     </fields>
     <fields>
         <fullName>MembershipJoinDate__c</fullName>
-        <deprecated>false</deprecated>
         <externalId>false</externalId>
         <label>Membership Join Date</label>
         <required>false</required>
@@ -254,7 +242,6 @@
     <fields>
         <fullName>NumberOfClosedOpps__c</fullName>
         <defaultValue>0</defaultValue>
-        <deprecated>false</deprecated>
         <externalId>false</externalId>
         <label>Total Number of Gifts</label>
         <precision>18</precision>
@@ -267,7 +254,6 @@
     <fields>
         <fullName>NumberOfMembershipOpps__c</fullName>
         <defaultValue>0</defaultValue>
-        <deprecated>false</deprecated>
         <externalId>false</externalId>
         <label>Number of Memberships</label>
         <precision>18</precision>
@@ -280,7 +266,6 @@
     <fields>
         <fullName>OppAmount2YearsAgo__c</fullName>
         <defaultValue>0</defaultValue>
-        <deprecated>false</deprecated>
         <externalId>false</externalId>
         <label>Total Gifts Two Years Ago</label>
         <precision>16</precision>
@@ -292,7 +277,6 @@
     <fields>
         <fullName>OppAmountLastNDays__c</fullName>
         <defaultValue>0</defaultValue>
-        <deprecated>false</deprecated>
         <externalId>false</externalId>
         <label>Total Gifts Last 365 Days</label>
         <precision>16</precision>
@@ -304,7 +288,6 @@
     <fields>
         <fullName>OppAmountLastYear__c</fullName>
         <defaultValue>0</defaultValue>
-        <deprecated>false</deprecated>
         <externalId>false</externalId>
         <label>Total Gifts Last Year</label>
         <precision>16</precision>
@@ -316,7 +299,6 @@
     <fields>
         <fullName>OppAmountThisYear__c</fullName>
         <defaultValue>0</defaultValue>
-        <deprecated>false</deprecated>
         <externalId>false</externalId>
         <label>Total Gifts This Year</label>
         <precision>16</precision>
@@ -328,7 +310,6 @@
     <fields>
         <fullName>OppsClosed2YearsAgo__c</fullName>
         <defaultValue>0</defaultValue>
-        <deprecated>false</deprecated>
         <externalId>false</externalId>
         <label>Number of Gifts Two Years Ago</label>
         <precision>18</precision>
@@ -341,7 +322,6 @@
     <fields>
         <fullName>OppsClosedLastNDays__c</fullName>
         <defaultValue>0</defaultValue>
-        <deprecated>false</deprecated>
         <externalId>false</externalId>
         <label>Number of Gifts Last N Days</label>
         <precision>18</precision>
@@ -354,7 +334,6 @@
     <fields>
         <fullName>OppsClosedLastYear__c</fullName>
         <defaultValue>0</defaultValue>
-        <deprecated>false</deprecated>
         <externalId>false</externalId>
         <label>Number of Gifts Last Year</label>
         <precision>18</precision>
@@ -367,7 +346,6 @@
     <fields>
         <fullName>OppsClosedThisYear__c</fullName>
         <defaultValue>0</defaultValue>
-        <deprecated>false</deprecated>
         <externalId>false</externalId>
         <label>Number of Gifts This Year</label>
         <precision>18</precision>
@@ -422,7 +400,6 @@
     <fields>
         <fullName>SmallestAmount__c</fullName>
         <defaultValue>0</defaultValue>
-        <deprecated>false</deprecated>
         <externalId>false</externalId>
         <label>Smallest Gift</label>
         <precision>16</precision>
@@ -434,7 +411,6 @@
     <fields>
         <fullName>TotalMembershipOppAmount__c</fullName>
         <defaultValue>0</defaultValue>
-        <deprecated>false</deprecated>
         <externalId>false</externalId>
         <label>Total Membership Amount</label>
         <precision>16</precision>
@@ -446,7 +422,6 @@
     <fields>
         <fullName>TotalOppAmount__c</fullName>
         <defaultValue>0</defaultValue>
-        <deprecated>false</deprecated>
         <externalId>false</externalId>
         <label>Total Gifts</label>
         <precision>16</precision>

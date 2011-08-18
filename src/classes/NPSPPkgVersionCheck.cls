@@ -76,7 +76,7 @@ global without sharing class NPSPPkgVersionCheck {
         string newendpoint = endpoint;
         
         if (!system.Test.isRunningTest())
-            newendpoint = newendpoint + '&pkgver=' + string.valueOf(Package.Version.Request);
+            newendpoint = newendpoint + '&pkgver=' + '2.3.7'; //string.valueOf(Package.Version.Request);
         
         else
             newendpoint = newendpoint + '&pkgver=' + '1.5.0';

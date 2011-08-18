@@ -404,6 +404,13 @@ global without sharing class Households {
         return String.valueOf(totalString);
     }
     
+    /// <name> doHouseholdNaming </name>
+    /// <summary> OVERRIDEABLE - get appropriate naming class and set it to go.
+    public virtual void doHouseholdNaming (Id[] hhids) {
+    	HouseholdNaming hn = new HouseholdNaming();
+      hn.UpdateNames(hhids);
+    }
+    
     /// <name> getHouseholdLastTransaction </name>
     /// <summary>  </summary>
     public static String getHouseholdLastTransactionDate(Id householdId)
@@ -515,7 +522,7 @@ global without sharing class Households {
     public static Households_Settings__c getHouseholdsSettingsForTests(Households_Settings__c mySettings) {
         
         //clear out whatever settings exist
-        delete [select id from npo02__Households_Settings__c]; 
+        delete [select id from Households_Settings__c]; 
          
         //create our own based on what's passed in from the test
         householdsSettings = new Households_Settings__c (

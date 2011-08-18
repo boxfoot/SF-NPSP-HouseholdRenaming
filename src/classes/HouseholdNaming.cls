@@ -104,6 +104,8 @@ global virtual without sharing class HouseholdNaming {
             //we lost our only contact - he/she's anonymous
             if (contactlastnames.isEmpty())
                 householdname = system.label.HouseholdAnonymousName + ' ' + system.label.DefaultHouseholdName;
+
+
                     
             //standard hh naming
             else if (contactlastnames.size() > 0 && contactlastnames.size() < 10){          
@@ -254,17 +256,18 @@ global virtual without sharing class HouseholdNaming {
         
         //start the activation batch process, used only once, on initial click
         //to enable batch rollups
-        BATCH_HouseholdNaming batch = new BATCH_HouseholdNaming('SELECT id, npo02__Household__r.id, ' + 
-        'npo02__household__r.Name, npo02__Household__r.npo02__Informal_Greeting__c, npo02__Household__r.npo02__Formal_Greeting__c, ' +
-        'npo02__household__r.npo02__SYSTEM_CUSTOM_NAMING__c, npo02__Naming_Exclusions__c,  Firstname, lastname, ' +
+        BATCH_HouseholdNaming batch = new BATCH_HouseholdNaming('SELECT id, Household__r.id, ' + 
+        'household__r.Name, Household__r.Informal_Greeting__c, Household__r.Formal_Greeting__c, ' +
+        'household__r.SYSTEM_CUSTOM_NAMING__c, Naming_Exclusions__c,  Firstname, lastname, ' +
         'salutation ' +
-        'FROM Contact where npo02__Household__c != null ' +
+        'FROM Contact where Household__c != null ' +
         (isTest ? ' and lastname=\'%LastName0%\' LIMIT 200' : '') + 
         '', true);
         id batchProcessId = database.executeBatch(batch, batchSize);                 
     }
     
     /*** Test Methods ***/
+    /* REMOVETHIS
     static testMethod void HouseholdNamingTest(){
       //settings
       Households_Settings__c householdSettingsForTests = Households.getHouseholdsSettingsForTests(
@@ -373,13 +376,13 @@ global virtual without sharing class HouseholdNaming {
         integer counter = 0;
         for (Contact c : clist){
             if(counter == 0)
-                c.npo02__Household__c = clist[clist.size() - 1].npo02__Household__c;
+                c.Household__c = clist[clist.size() - 1].Household__c;
             else if (counter > 0 && counter < 3)
-                c.npo02__Household__c = clist[clist.size() - 2].npo02__Household__c;
+                c.Household__c = clist[clist.size() - 2].Household__c;
             else if (counter > 2 && counter < 8)
-                c.npo02__Household__c = clist[clist.size() - 3].npo02__Household__c;
+                c.Household__c = clist[clist.size() - 3].Household__c;
             else if (counter < 20)
-                c.npo02__Household__c = clist[clist.size() - 4].npo02__Household__c;
+                c.Household__c = clist[clist.size() - 4].Household__c;
             counter++;
         }
         //this should cause renaming to happen
@@ -388,10 +391,10 @@ global virtual without sharing class HouseholdNaming {
         update clist;
         
         list<id> newhhids = new list<id>();
-        newhhids.add(clist[clist.size() - 1].npo02__Household__r.id);
-        newhhids.add(clist[clist.size() - 2].npo02__Household__r.id);
-        newhhids.add(clist[clist.size() - 3].npo02__Household__r.id);
-        newhhids.add(clist[clist.size() - 4].npo02__Household__r.id);
+        newhhids.add(clist[clist.size() - 1].Household__r.id);
+        newhhids.add(clist[clist.size() - 2].Household__r.id);
+        newhhids.add(clist[clist.size() - 3].Household__r.id);
+        newhhids.add(clist[clist.size() - 4].Household__r.id);
         
         //update our newly updated contact's households
         Householdnaming hn = new Householdnaming();
@@ -434,7 +437,7 @@ global virtual without sharing class HouseholdNaming {
             system.assertEquals(hhidcontactmap.get(hhid)[0].Household__r.Informal_Greeting__c, hn.getInformalName(hhidcontactmap.get(hhid)));
             system.assertEquals(hhidcontactmap.get(hhid)[0].Household__r.Formal_Greeting__c, hn.getFormalName(hhidcontactmap.get(hhid)));
         }       
-        */
+        */ /*
     test.stopTest();        
-    }  
+    }  */
 }

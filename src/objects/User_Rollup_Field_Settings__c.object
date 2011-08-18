@@ -6,7 +6,6 @@
     <enableFeeds>false</enableFeeds>
     <fields>
         <fullName>Field_Action__c</fullName>
-        <deprecated>false</deprecated>
         <externalId>false</externalId>
         <inlineHelpText>The rollup action (MIN, MAX, SUM, COUNT) to be performed on the source field</inlineHelpText>
         <label>Field Action</label>
@@ -17,7 +16,6 @@
     </fields>
     <fields>
         <fullName>Object_Name__c</fullName>
-        <deprecated>false</deprecated>
         <externalId>false</externalId>
         <inlineHelpText>The object this user rollup is mapped to</inlineHelpText>
         <label>Object Name</label>
@@ -28,7 +26,6 @@
     </fields>
     <fields>
         <fullName>Source_Field__c</fullName>
-        <deprecated>false</deprecated>
         <externalId>false</externalId>
         <inlineHelpText>The source field and action from the object for this user rollup</inlineHelpText>
         <label>Source Field</label>
@@ -39,7 +36,6 @@
     </fields>
     <fields>
         <fullName>Target_Field__c</fullName>
-        <deprecated>false</deprecated>
         <externalId>false</externalId>
         <inlineHelpText>The target field for placing the rolled-up value for this user defined rollup</inlineHelpText>
         <label>Target Field</label>

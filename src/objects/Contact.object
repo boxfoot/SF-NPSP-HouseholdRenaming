@@ -1,10 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
-    <enableFeeds>true</enableFeeds>
     <fields>
         <fullName>AverageAmount__c</fullName>
         <defaultValue>0</defaultValue>
-        <deprecated>false</deprecated>
         <externalId>false</externalId>
         <label>Average Gift</label>
         <precision>16</precision>
@@ -15,7 +13,6 @@
     </fields>
     <fields>
         <fullName>FirstCloseDate__c</fullName>
-        <deprecated>false</deprecated>
         <externalId>false</externalId>
         <label>First Gift Date</label>
         <required>false</required>
@@ -24,7 +21,6 @@
     </fields>
     <fields>
         <fullName>Formula_HouseholdMailingAddress__c</fullName>
-        <deprecated>false</deprecated>
         <externalId>false</externalId>
         <formula>Household__r.Formula_MailingAddress__c</formula>
         <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
@@ -35,7 +31,6 @@
     </fields>
     <fields>
         <fullName>Formula_HouseholdPhone__c</fullName>
-        <deprecated>false</deprecated>
         <externalId>false</externalId>
         <formula>Household__r.HouseholdPhone__c</formula>
         <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
@@ -46,7 +41,6 @@
     </fields>
     <fields>
         <fullName>Household__c</fullName>
-        <deprecated>false</deprecated>
         <externalId>false</externalId>
         <label>Household</label>
         <referenceTo>Household__c</referenceTo>
@@ -57,7 +51,6 @@
     </fields>
     <fields>
         <fullName>Languages__c</fullName>
-        <deprecated>false</deprecated>
         <externalId>false</externalId>
         <label>Languages - DEPRECATED</label>
         <length>100</length>
@@ -69,7 +62,6 @@
     <fields>
         <fullName>LargestAmount__c</fullName>
         <defaultValue>0</defaultValue>
-        <deprecated>false</deprecated>
         <externalId>false</externalId>
         <label>Largest Gift</label>
         <precision>16</precision>
@@ -80,7 +72,6 @@
     </fields>
     <fields>
         <fullName>LastCloseDateHH__c</fullName>
-        <deprecated>false</deprecated>
         <externalId>false</externalId>
         <formula>Household__r.LastCloseDate__c</formula>
         <label>Last Household Gift Date</label>
@@ -89,7 +80,6 @@
     </fields>
     <fields>
         <fullName>LastCloseDate__c</fullName>
-        <deprecated>false</deprecated>
         <externalId>false</externalId>
         <label>Last Gift Date</label>
         <required>false</required>
@@ -99,7 +89,6 @@
     <fields>
         <fullName>LastMembershipAmount__c</fullName>
         <defaultValue>0</defaultValue>
-        <deprecated>false</deprecated>
         <externalId>false</externalId>
         <label>Last Membership Amount</label>
         <precision>16</precision>
@@ -110,7 +99,6 @@
     </fields>
     <fields>
         <fullName>LastMembershipDate__c</fullName>
-        <deprecated>false</deprecated>
         <externalId>false</externalId>
         <label>Last Membership Date</label>
         <required>false</required>
@@ -119,7 +107,6 @@
     </fields>
     <fields>
         <fullName>LastMembershipLevel__c</fullName>
-        <deprecated>false</deprecated>
         <externalId>false</externalId>
         <label>Last Membership Level</label>
         <length>255</length>
@@ -130,7 +117,6 @@
     </fields>
     <fields>
         <fullName>LastMembershipOrigin__c</fullName>
-        <deprecated>false</deprecated>
         <externalId>false</externalId>
         <label>Last Membership Origin</label>
         <length>255</length>
@@ -142,7 +128,6 @@
     <fields>
         <fullName>LastOppAmount__c</fullName>
         <defaultValue>0</defaultValue>
-        <deprecated>false</deprecated>
         <externalId>false</externalId>
         <label>Last Gift Amount</label>
         <precision>16</precision>
@@ -180,7 +165,6 @@
     </fields>
     <fields>
         <fullName>Level__c</fullName>
-        <deprecated>false</deprecated>
         <externalId>false</externalId>
         <label>Level - DEPRECATED</label>
         <picklist>
@@ -203,7 +187,6 @@
     </fields>
     <fields>
         <fullName>MembershipEndDate__c</fullName>
-        <deprecated>false</deprecated>
         <externalId>false</externalId>
         <label>Membership End Date</label>
         <required>false</required>
@@ -212,7 +195,6 @@
     </fields>
     <fields>
         <fullName>MembershipJoinDate__c</fullName>
-        <deprecated>false</deprecated>
         <externalId>false</externalId>
         <label>Membership Join Date</label>
         <required>false</required>
@@ -220,9 +202,32 @@
         <type>Date</type>
     </fields>
     <fields>
+        <fullName>Naming_Exclusions__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>Determines which household names this contact is NOT included as part of.</inlineHelpText>
+        <label>Naming Exclusions</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Household__c.Name</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Household__c.Formal_Greeting__c</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Household__c.Informal_Greeting__c</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackFeedHistory>false</trackFeedHistory>
+        <type>MultiselectPicklist</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
         <fullName>NumberOfClosedOpps__c</fullName>
         <defaultValue>0</defaultValue>
-        <deprecated>false</deprecated>
         <externalId>false</externalId>
         <label>Total Number of Gifts</label>
         <precision>18</precision>
@@ -235,7 +240,6 @@
     <fields>
         <fullName>NumberOfMembershipOpps__c</fullName>
         <defaultValue>0</defaultValue>
-        <deprecated>false</deprecated>
         <externalId>false</externalId>
         <label>Number of Memberships</label>
         <precision>18</precision>
@@ -248,7 +252,6 @@
     <fields>
         <fullName>OppAmount2YearsAgo__c</fullName>
         <defaultValue>0</defaultValue>
-        <deprecated>false</deprecated>
         <externalId>false</externalId>
         <label>Total Gifts Two Years Ago</label>
         <precision>16</precision>
@@ -260,7 +263,6 @@
     <fields>
         <fullName>OppAmountLastNDays__c</fullName>
         <defaultValue>0</defaultValue>
-        <deprecated>false</deprecated>
         <externalId>false</externalId>
         <label>Total Gifts Last 365 Days</label>
         <precision>16</precision>
@@ -271,7 +273,6 @@
     </fields>
     <fields>
         <fullName>OppAmountLastYearHH__c</fullName>
-        <deprecated>false</deprecated>
         <externalId>false</externalId>
         <formula>Household__r.OppAmountLastYear__c</formula>
         <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
@@ -284,7 +285,6 @@
     <fields>
         <fullName>OppAmountLastYear__c</fullName>
         <defaultValue>0</defaultValue>
-        <deprecated>false</deprecated>
         <externalId>false</externalId>
         <label>Total Gifts Last Year</label>
         <precision>16</precision>
@@ -295,7 +295,6 @@
     </fields>
     <fields>
         <fullName>OppAmountThisYearHH__c</fullName>
-        <deprecated>false</deprecated>
         <externalId>false</externalId>
         <formula>Household__r.OppAmountThisYear__c</formula>
         <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
@@ -308,7 +307,6 @@
     <fields>
         <fullName>OppAmountThisYear__c</fullName>
         <defaultValue>0</defaultValue>
-        <deprecated>false</deprecated>
         <externalId>false</externalId>
         <label>Total Gifts This Year</label>
         <precision>16</precision>
@@ -320,7 +318,6 @@
     <fields>
         <fullName>OppsClosed2YearsAgo__c</fullName>
         <defaultValue>0</defaultValue>
-        <deprecated>false</deprecated>
         <externalId>false</externalId>
         <label>Number of Gifts Two Years Ago</label>
         <precision>18</precision>
@@ -333,7 +330,6 @@
     <fields>
         <fullName>OppsClosedLastNDays__c</fullName>
         <defaultValue>0</defaultValue>
-        <deprecated>false</deprecated>
         <externalId>false</externalId>
         <label>Number of Gifts Last 365 Days</label>
         <precision>18</precision>
@@ -346,7 +342,6 @@
     <fields>
         <fullName>OppsClosedLastYear__c</fullName>
         <defaultValue>0</defaultValue>
-        <deprecated>false</deprecated>
         <externalId>false</externalId>
         <label>Number of Gifts Last Year</label>
         <precision>18</precision>
@@ -359,7 +354,6 @@
     <fields>
         <fullName>OppsClosedThisYear__c</fullName>
         <defaultValue>0</defaultValue>
-        <deprecated>false</deprecated>
         <externalId>false</externalId>
         <label>Number of Gifts This Year</label>
         <precision>18</precision>
@@ -372,7 +366,6 @@
     <fields>
         <fullName>SmallestAmount__c</fullName>
         <defaultValue>0</defaultValue>
-        <deprecated>false</deprecated>
         <externalId>false</externalId>
         <label>Smallest Gift</label>
         <precision>16</precision>
@@ -383,7 +376,6 @@
     </fields>
     <fields>
         <fullName>SystemHouseholdProcessor__c</fullName>
-        <deprecated>false</deprecated>
         <description>Used to set if Households should get created for all Contacts, or just those which are connected to an individual account</description>
         <externalId>false</externalId>
         <label>_SYSTEM: HOUSEHOLD PROCESSOR</label>
@@ -408,7 +400,6 @@
     <fields>
         <fullName>TotalMembershipOppAmount__c</fullName>
         <defaultValue>0</defaultValue>
-        <deprecated>false</deprecated>
         <externalId>false</externalId>
         <label>Total Membership Amount</label>
         <precision>16</precision>
@@ -420,7 +411,6 @@
     <fields>
         <fullName>TotalOppAmount__c</fullName>
         <defaultValue>0</defaultValue>
-        <deprecated>false</deprecated>
         <externalId>false</externalId>
         <label>Total Gifts</label>
         <precision>16</precision>
@@ -431,7 +421,6 @@
     </fields>
     <fields>
         <fullName>Total_Household_Gifts__c</fullName>
-        <deprecated>false</deprecated>
         <externalId>false</externalId>
         <formula>Household__r.TotalOppAmount__c</formula>
         <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>

@@ -2,11 +2,8 @@
 	action="{!getSettingsFirstTime}">
 	<apex:form id="form">
 		<apex:sectionHeader title="Households Settings"
-			subtitle="Configure Settings">
-			<description>
-                Settings that control the behavior of the Households package. Changing these will change how your Nonprofit Starter Pack behaves.
-            </description>
-		</apex:sectionHeader>
+			subtitle="Configure Settings"
+			description="Settings that control the behavior of the Households package. Changing these will change how your Nonprofit Starter Pack behaves."/>
 
 		<apex:pageMessages id="pageMessages" />
 		<apex:pageBlock id="householdssettings" title="Households Settings">
@@ -88,7 +85,7 @@
 					rendered="{!!settings.Advanced_Household_Naming__c}" />
 				<apex:outputPanel rendered="{!runningbatch}">
 					<c:batchjobs batchComponentLabel="Naming Activation Progress"
-						numberOfJobs="1" rerenderOnComplete="true" />
+						numberOfJobs="1"/><!-- rerenderOnComplete="true" /> -->
 				</apex:outputPanel>
 
 			</apex:pageBlockSection>

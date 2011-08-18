@@ -41,7 +41,7 @@ public with sharing class userRollupSettings {
     public list<SelectOption> targetobjects = new list<SelectOption>{
     new SelectOption('Account', 'Account'),
     new SelectOption('Contact', 'Contact'),
-    new SelectOption('npo02__Household__c', 'npo02__Household__c')    
+    new SelectOption('Household__c', 'Household__c')    
     }; 
     
     //defines values for the final list setting
@@ -132,7 +132,7 @@ public with sharing class userRollupSettings {
         	   string fieldname = (currentURFSMap.get(s).Target_Field__c).toLowerCase();
         	   //we need to strip out the namespace
         	   if (fieldname.contains('npo02')){
-        	   	   fieldname = fieldname.replace('npo02__', '');
+        	   	   fieldname = fieldname.replace('', '');
         	   	
         	   }
         	   else if (fieldname.contains('npe01')){
@@ -175,7 +175,7 @@ public with sharing class userRollupSettings {
                 'oppamount2yearsago__c', 'totalmembershipoppamount__c', 'numberofclosedopps__c'
            };
         }
-        else if(targetobject == 'Household__c' || targetobject == 'npo02__Household__c'){
+        else if(targetobject == 'Household__c' || targetobject == 'Household__c'){
             targetTokenMap = Schema.SobjectType.Household__c.fields.getMap().clone();
             knownfields = new set<string>{
                 'addressee__c', 'always_anonymous__c', 'averagemount__c', 'firstclosedate__c',   
@@ -289,7 +289,7 @@ public with sharing class userRollupSettings {
                 targetField = Schema.sObjectType.Account.fields.getMap().get(urfs.Target_Field__c); 
                 if (targetField == null) isValid = false;               
             }
-            else if (urfs.Object_Name__c == 'Household__c' || urfs.Object_Name__c == 'npo02__Household__c'){
+            else if (urfs.Object_Name__c == 'Household__c' || urfs.Object_Name__c == 'Household__c'){
                 targetField = Schema.sObjectType.Household__c.fields.getMap().get(urfs.Target_Field__c); 
                 if (targetField == null) isValid = false;
             }
@@ -361,7 +361,7 @@ public with sharing class userRollupSettings {
         list<SelectOption> targetFieldList = controller.getTargetFields();
                
         //change target object to test other options        
-        controller.targetobject = 'npo02__Household__c';
+        controller.targetobject = 'Household__c';
         targetFieldList = controller.getTargetFields();
         
         controller.targetobject = 'Contact';
@@ -380,10 +380,10 @@ public with sharing class userRollupSettings {
         //insert invalid rollup to test error handling methods
         User_Rollup_Field_Settings__c badurfs = new User_Rollup_Field_Settings__c(
         Name = 'Invalid Test Rollup',
-        npo02__Target_Field__c = 'InvalidTargetField__test',
-        npo02__Source_Field__c = 'InvalidSourceField__test',
-        npo02__Object_Name__c = 'Account',
-        npo02__Field_Action__c = 'TEST'         
+        Target_Field__c = 'InvalidTargetField__test',
+        Source_Field__c = 'InvalidSourceField__test',
+        Object_Name__c = 'Account',
+        Field_Action__c = 'TEST'         
         );
         
         insert badurfs;
@@ -395,10 +395,10 @@ public with sharing class userRollupSettings {
         //exercise household code
         User_Rollup_Field_Settings__c HHurfs = new User_Rollup_Field_Settings__c(
         Name = 'Household Test Rollup',
-        npo02__Target_Field__c = 'lastoppamount__c',
-        npo02__Source_Field__c = 'Amount',
-        npo02__Object_Name__c = 'npo02__Household__c',
-        npo02__Field_Action__c = 'MAX'         
+        Target_Field__c = 'lastoppamount__c',
+        Source_Field__c = 'Amount',
+        Object_Name__c = 'Household__c',
+        Field_Action__c = 'MAX'         
         );
         
         insert HHurfs; 
@@ -412,10 +412,10 @@ public with sharing class userRollupSettings {
         
         User_Rollup_Field_Settings__c badobject = new User_Rollup_Field_Settings__c(
         Name = 'Invalid Object Rollup',
-        npo02__Target_Field__c = 'InvalidTargetField__test',
-        npo02__Source_Field__c = 'InvalidSourceField__test',
-        npo02__Object_Name__c = 'BadAccount',
-        npo02__Field_Action__c = 'TEST'
+        Target_Field__c = 'InvalidTargetField__test',
+        Source_Field__c = 'InvalidSourceField__test',
+        Object_Name__c = 'BadAccount',
+        Field_Action__c = 'TEST'
         );
         
         insert badobject;

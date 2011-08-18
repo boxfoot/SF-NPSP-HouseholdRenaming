@@ -4,7 +4,7 @@ public with sharing class householdsSettings {
     public boolean runningBatch {get; set;}
     
      /********Vars for PKG Update Info *************/
-    public string getMyVersion(){return string.valueof(Package.Version.Request);}
+    public string getMyVersion(){return string.valueof('2.3.7');} //Package.Version.Request);}
     public string getMaxVersion(){return pageSettings.Max_Package_Version__c;}
     public string getUpdateURL(){return pageSettings.Package_Update_URL__c;}
     public string getLastUpdate(){      
@@ -71,20 +71,20 @@ public with sharing class householdsSettings {
         }    	   
     	        
         //set the multi-select fields
-        if(pageSettings.npo02__Excluded_Account_Opp_Types__c!=null){
-        	acctTypes = pageSettings.npo02__Excluded_Account_Opp_Types__c.split(';',0);
+        if(pageSettings.Excluded_Account_Opp_Types__c!=null){
+        	acctTypes = pageSettings.Excluded_Account_Opp_Types__c.split(';',0);
         }
         
-         if(pageSettings.npo02__Excluded_Contact_Opp_Types__c!=null){
-        	contactTypes = pageSettings.npo02__Excluded_Contact_Opp_Types__c.split(';',0);
+         if(pageSettings.Excluded_Contact_Opp_Types__c!=null){
+        	contactTypes = pageSettings.Excluded_Contact_Opp_Types__c.split(';',0);
         }
         
-         if(pageSettings.npo02__Excluded_Account_Opp_Rectypes__c!=null){
-        	acctRTs = pageSettings.npo02__Excluded_Account_Opp_Rectypes__c.split(';',0);
+         if(pageSettings.Excluded_Account_Opp_Rectypes__c!=null){
+        	acctRTs = pageSettings.Excluded_Account_Opp_Rectypes__c.split(';',0);
         }
         
-         if(pageSettings.npo02__Excluded_Contact_Opp_Rectypes__c!=null){
-        	contactRTs = pageSettings.npo02__Excluded_Contact_Opp_Rectypes__c.split(';',0);
+         if(pageSettings.Excluded_Contact_Opp_Rectypes__c!=null){
+        	contactRTs = pageSettings.Excluded_Contact_Opp_Rectypes__c.split(';',0);
         }
         
         

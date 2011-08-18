@@ -60,7 +60,7 @@ public class CTRL_OpportunityRollup {
         ref.setRedirect(true);
         return ref;
     }
-
+    
     public static testMethod void testRollup() {
         String giftRecordTypeNameForTests = RecordTypes.getRecordTypeNameForGiftsTests('Opportunity');
         Households_Settings__c householdSettingsForTests = Households.getHouseholdsSettingsForTests(
@@ -113,5 +113,6 @@ public class CTRL_OpportunityRollup {
         controller.rollup();
         controller.cancel();
     }
+    
 
 }

@@ -1,14 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
-    <businessProcesses>
-        <fullName>dummyBP</fullName>
-        <description>Dummy business process created for patch org.</description>
-        <isActive>true</isActive>
-    </businessProcesses>
-    <enableFeeds>true</enableFeeds>
     <fields>
         <fullName>CombinedRollupFieldset__c</fullName>
-        <deprecated>false</deprecated>
         <description>Concatenated fields used during rollups to locate the most recent opportunity.</description>
         <externalId>false</externalId>
         <formula>TEXT(CloseDate) + &apos;;|;&apos;+ TEXT(Amount) + &apos;;|;&apos;+ TEXT(npe01__Member_Level__c) + &apos;;|;&apos;+ TEXT(npe01__Membership_Origin__c)</formula>
@@ -20,7 +13,6 @@
     </fields>
     <fields>
         <fullName>CurrentGenerators__c</fullName>
-        <deprecated>false</deprecated>
         <externalId>false</externalId>
         <label>Current Generator(s) - DEPRECATED</label>
         <length>100</length>
@@ -31,7 +23,6 @@
     </fields>
     <fields>
         <fullName>DeliveryInstallationStatus__c</fullName>
-        <deprecated>false</deprecated>
         <externalId>false</externalId>
         <label>Delivery/Installation Status- DEPRECATED</label>
         <picklist>
@@ -81,7 +72,6 @@
     </fields>
     <fields>
         <fullName>MainCompetitors__c</fullName>
-        <deprecated>false</deprecated>
         <externalId>false</externalId>
         <label>Main Competitor(s) - DEPRECATED</label>
         <length>100</length>
@@ -92,7 +82,6 @@
     </fields>
     <fields>
         <fullName>OrderNumber__c</fullName>
-        <deprecated>false</deprecated>
         <externalId>false</externalId>
         <label>Order Number - DEPRECATED</label>
         <length>8</length>
@@ -190,7 +179,6 @@
     </fields>
     <fields>
         <fullName>TrackingNumber__c</fullName>
-        <deprecated>false</deprecated>
         <externalId>false</externalId>
         <label>Tracking Number - DEPRECATED</label>
         <length>12</length>
@@ -314,7 +302,6 @@
     </fields>
     <fields>
         <fullName>systemHouseholdContactRoleProcessor__c</fullName>
-        <deprecated>false</deprecated>
         <externalId>false</externalId>
         <inlineHelpText>Controls if Household contact roles are created for Opportunities</inlineHelpText>
         <label>_SYSTEM: HOUSEHOLD CONTACT ROLEPROCESSOR</label>
@@ -417,79 +404,6 @@
         </filters>
         <label>Won</label>
     </listViews>
-    <recordTypeTrackFeedHistory>false</recordTypeTrackFeedHistory>
-    <recordTypes>
-        <fullName>dummyRT</fullName>
-        <active>true</active>
-        <businessProcess>dummyBP</businessProcess>
-        <description>Dummy Record Type created for patch org.</description>
-        <label>dummyRT</label>
-        <picklistValues>
-            <picklist>ForecastCategoryName</picklist>
-            <values>
-                <fullName>Best Case</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Closed</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Commit</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Omitted</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Pipeline</fullName>
-                <default>false</default>
-            </values>
-        </picklistValues>
-        <picklistValues>
-            <picklist>LeadSource</picklist>
-            <values>
-                <fullName>Other</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Partner Referral</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Phone Inquiry</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Purchased List</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Web</fullName>
-                <default>false</default>
-            </values>
-        </picklistValues>
-        <picklistValues>
-            <picklist>Type</picklist>
-            <values>
-                <fullName>Existing Customer - Downgrade</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Existing Customer - Replacement</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Existing Customer - Upgrade</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>New Customer</fullName>
-                <default>false</default>
-            </values>
-        </picklistValues>
-    </recordTypes>
     <webLinks>
         <fullName>npe01__Add_Matching_Donation</fullName>
         <availability>online</availability>
